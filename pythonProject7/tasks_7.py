@@ -63,6 +63,7 @@ def familii():
            "Огородникова", "Мельников"]
     not_my_group = ["Пивоваров", "Виноделов", "Сыроедова", "Мясорубов", "Запеканкина", "Лукова", "Пирожков", "Сметанкин", "Борщев",
           "Хлебушкина"]
+    
     comm1 = tuple(random.sample(my_group, 5))
     comm2 = tuple(random.sample(not_my_group, 5))
     sport_comm = comm1 + comm2
