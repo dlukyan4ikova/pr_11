@@ -57,6 +57,26 @@ def get_weekend_and_workdays():
     weekends = days_of_week[-num_weekends:]  # Срез выхов
     workdays = days_of_week[:-num_weekends]
     return weekends, workdays
+# задание 4
+def familii():
+    my_group = ["Капкайкина", "Малахов", "Ершов", "Гиносян", "Шахбалаева", "Кюлян", "Коновальчиков", "Сухопар",
+           "Огородникова", "Мельников"]
+    not_my_group = ["Пивоваров", "Виноделов", "Сыроедова", "Мясорубов", "Запеканкина", "Лукова", "Пирожков", "Сметанкин", "Борщев",
+          "Хлебушкина"]
+    comm1 = tuple(random.sample(my_group, 5))
+    comm2 = tuple(random.sample(not_my_group, 5))
+    sport_comm = comm1 + comm2
+
+    print(f"Моя группа: {my_group}\nЛевая группа: {not_my_group}\nКоманда: {sport_comm}\nДлина кортежа: {len(sport_comm)} ")
+
+    sortirovka = tuple(sorted(sport_comm))
+    print("Сортировка команды по алфавиту:", sortirovka)
+
+    Ivanov = sport_comm.count("Иванов")
+    if Ivanov > 0:
+        print(f"Иванов есть в команде и встречается {Ivanov} раз")
+    else:
+        print("К сожалению, Иванова нет в команде:(")
 
 e = int(input("Введите номер задания:"))
 if e==1:
@@ -67,7 +87,8 @@ elif e == 3:
     weekends, workdays = get_weekend_and_workdays()
     print("Выходные дни:", weekends)
     print("Рабочие дни:", workdays)
-
+elif e ==4:
+    familii()
 
 
 
